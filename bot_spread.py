@@ -721,7 +721,8 @@ class WSClient:
             "apiKey": API_KEY,
             "symbol": SIMBOLO,
             "side": side,
-            "type": "LIMIT_MAKER",
+            "type": "LIMIT",
+            "timeInForce": "IOC",  # Immediate-or-Cancel: ejecuta ahora o cancela
             "quantity": fmt_qty(adj_qty),
             "price": fmt_price(price),
             "timestamp": ts_ms,
